@@ -6,15 +6,13 @@
 /*   By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:14:52 by akalkan           #+#    #+#             */
-/*   Updated: 2026/11/04 14:51:19 by akalkan          ###   ########.fr       */
+/*   Updated: 2026/11/05 16:11:06 by akalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 
 # define LIBFT_H
-#define _DEFAULT_SOURCE
-#include <bsd/string.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <ctype.h>
@@ -45,6 +43,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+int	ft_memcmp(const void *s1, const void *s2, size_t n);
+void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 #endif
-

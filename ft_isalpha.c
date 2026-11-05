@@ -6,12 +6,12 @@
 /*   By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/02 12:08:22 by akalkan           #+#    #+#             */
-/*   Updated: 2026/11/03 16:48:14 by akalkan          ###   ########.fr       */
+/*   Updated: 2026/11/04 17:18:18 by akalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-;
+
 int	ft_isalpha(int c)
 {
 	if ((c < 65 || c > 90)
