@@ -6,7 +6,7 @@
 #    By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/11/04 17:25:44 by akalkan           #+#    #+#              #
-#    Updated: 2026/11/07 17:21:11 by akalkan          ###   ########.fr        #
+#    Updated: 2026/11/09 13:20:47 by akalkan          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,6 +44,7 @@ SRCS		= ft_atoi.c \
 			  ft_substr.c \
 			  ft_strjoin.c \
 			  ft_strtrim.c \
+			  ft_split.c \
 
 OBJS		= $(SRCS:.c=.o)
 

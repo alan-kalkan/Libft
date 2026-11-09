@@ -6,7 +6,7 @@
 /*   By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/03 12:14:52 by akalkan           #+#    #+#             */
-/*   Updated: 2026/11/07 17:21:17 by akalkan          ###   ########.fr       */
+/*   Updated: 2026/11/09 17:39:27 by akalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #include <ctype.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
 
 //FT_IS
 int		ft_isalnum(int c);
@@ -58,4 +59,7 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
+char	*ft_itoa(int n);
+
 #endif
