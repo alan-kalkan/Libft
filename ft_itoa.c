@@ -6,7 +6,7 @@
 /*   By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 16:11:32 by akalkan           #+#    #+#             */
-/*   Updated: 2026/11/09 17:36:01 by akalkan          ###   ########.fr       */
+/*   Updated: 2026/11/10 09:55:01 by akalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static int	get_len(long n)
 	int	len;
 
 	len = 0;
-	if ( n <= 0)
+	if (n <= 0)
 	{
 		len++;
 		n = -n;

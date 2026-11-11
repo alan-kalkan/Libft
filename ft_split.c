@@ -6,38 +6,37 @@
 /*   By: akalkan <akalkan@student.42nice.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/09 13:21:03 by akalkan           #+#    #+#             */
-/*   Updated: 2026/11/09 19:55:52 by akalkan          ###   ########.fr       */
+/*   Updated: 2026/11/11 14:54:28 by akalkan          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	word_count(const char *s, char c);
-static size_t word_len(const char *s, char c);
+static int		word_count(const char *s, char c);
+static size_t	word_len(const char *s, char c);
+static char		**free_all(char **arr, size_t word);
 
 char	**ft_split(char const *s, char c)
 {
 	char	**arr;
-	size_t word;
+	size_t	word;
 	size_t	i;
-	size_t	len;
 
 	i = 0;
 	word = 0;
 	if (!s)
 		return (NULL);
 	arr = (char **)malloc((word_count(s, c) + 1) * sizeof(char *));
-	if (!arr)
-		return (NULL);
 	while (s[i])
 	{
 		while (s[i] && s[i] == c)
 			i++;
-		if (s[i] && s[i] != c)
+		if (s[i])
 		{
-			len = word_len(&s[i], c);
-			arr[word] = ft_substr(s, i, len);
-			i += len;
+			arr[word] = ft_substr(s, i, word_len(&s[i], c));
+			if (!arr[word])
+				return (free_all(arr, word));
+			i += word_len(&s[i], c);
 			word++;
 		}
 	}
@@ -59,14 +58,12 @@ static int	word_count(const char *s, char c)
 		if (s[i] && s[i] != c)
 			word++;
 		while (s[i] && s[i] != c)
-		{
 			i++;
-		}
 	}
 	return (word);
 }
 
-static size_t word_len(const char *s, char c)
+static size_t	word_len(const char *s, char c)
 {
 	int	i;
 
@@ -76,4 +73,15 @@ static size_t word_len(const char *s, char c)
 		i++;
 	}
 	return (i);
+}
+
+static char	**free_all(char **arr, size_t word)
+{
+	while (word > 0)
+	{
+		word--;
+		free(arr[word]);
+	}
+	free(arr);
+	return (NULL);
 }
